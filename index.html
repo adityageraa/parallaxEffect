@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <nav id="nav-bar">
+        <div class="logo-container">
+            <span>LOGO</span>
+        </div>
+
+        <div class="link-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Events</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <img src="assets/stars.png" id="stars" alt="">
+        <img src="assets/moon.png" id="moon" alt="">
+        <img src="assets/mountains_behind.png" id="mountain-behind" alt="">
+        <h2 id="hero-text">EXPERIENCE THE EFFECT</h2>
+        <a href="#section" id="btn">Discover More!</a>
+        <img src="assets/mountains_front.png" id="mountains-front" alt="">
+    </main>
+
+    <section id="section">
+        <h2>Parallax Scrolling Effect</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora hic ex eius rerum quibusdam ut, facilis dicta sapiente exercitationem. Enim, ipsum? Deleniti veniam similique ratione molestiae nobis quae voluptas quam placeat iusto sint, fuga alias voluptate velit magnam impedit quia. Perspiciatis qui fuga enim voluptatem earum eaque labore dicta voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio obcaecati quisquam tempora quibusdam vitae. Architecto, molestias commodi beatae nihil perspiciatis error, ad laudantium quisquam eius odit ullam quia eligendi ipsam officia aliquam. Pariatur nam voluptate id commodi earum. Sit, in? Exercitationem repellendus earum architecto nihil vel hic, voluptate magni odio nulla.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis assumenda enim, adipisci veritatis perspiciatis animi sit dolores dicta? Incidunt, officiis? Eos, incidunt. Eum nam nihil consectetur assumenda totam sunt fugit repudiandae quis id, fuga repellendus earum incidunt libero sit rem quisquam cumque blanditiis. Beatae cum nulla explicabo tempora, non inventore cupiditate iste repudiandae amet ratione ab asperiores similique tempore quos earum at repellat eaque facilis enim voluptatem reprehenderit commodi pariatur rem. Ipsa eius, excepturi tempora nam quod placeat ex iusto, neque voluptatum, vitae molestias labore obcaecati! Veritatis, vero rerum officiis fugit nesciunt cumque. Ratione magni pariatur neque facere vel? Totam temporibus, porro ea ab quisquam blanditiis quod nemo molestiae id veniam et voluptatem ratione minima quas earum. Magni accusamus eaque perferendis cupiditate aperiam, non iure!</p>
+    </section>
+
+
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mtnBack = document.getElementById('mountain-behind')
+        let heroText = document.getElementById('hero-text')
+        let button = document.getElementById('btn')
+        let mtnFront = document.getElementById('mountains-front')
+        let navbar = document.getElementById('nav-bar')
+
+        window.addEventListener('scroll', () =>{
+            let scrollValue = window.scrollY;
+
+            stars.style.left = scrollValue * .50 + 'px';
+            moon.style.top = scrollValue * 1 + 'px';
+            mtnBack.style.top = scrollValue * .25 + 'px';
+            heroText.style.marginRight = scrollValue * 8 + 'px';
+            heroText.style.marginTop = scrollValue + 'px';
+        })
+    </script>
+</body>
+</html>
